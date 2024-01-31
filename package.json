@@ -2,21 +2,19 @@
   "name": "twitter",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@google-cloud/local-auth": "^2.1.0",
-    "@googleapis/docs": "^3.0.0",
     "axios": "^1.6.2",
-    "googleapis": "^105.0.0",
-    "protonmail-api": "^2.2.0",
+    "inquirer": "^8.2.6",
     "puppeteer": "^21.5.2",
-    "puppeteer-cluster": "^0.23.0",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-recaptcha": "^3.6.8",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "twitter-api-v2": "^1.16.0"
   }
 }
