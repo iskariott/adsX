@@ -4,6 +4,8 @@ const USER_LIST_URL = URL + 'user/list';
 const BROWSER_START_URL = URL + 'browser/start';
 const BROWSER_STOP_URL = URL + 'browser/stop';
 
+const PASS = '';
+
 const accList = {
   '0': '2',
   '1': '3',
@@ -153,4 +155,5 @@ module.exports = {
   USER_LIST_URL,
   BROWSER_START_URL,
   BROWSER_STOP_URL,
+  PASS,
 };

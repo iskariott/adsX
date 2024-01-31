@@ -1,3 +1,4 @@
+const { PASS } = require('../constants.js');
 const { getRandomName, getRandMonth, getRandInterval } = require('../utils.js');
 
 async function createTwitter(page, mail) {
@@ -17,19 +18,17 @@ async function createTwitter(page, mail) {
   await page.waitForSelector('div[data-testid="ocfSignupReviewNextLink"]', { timeout: 5000 });
   await page.click('[data-testid="ocfSignupReviewNextLink"]');
   await page.waitForSelector('input[name="password"]', { timeout: 300_000 });
-  await page.type('input[name="password"]', 'Tw33tP@ss');
+  await page.type('input[name="password"]', PASS);
   await new Promise((r) => setTimeout(r, 1000));
   await page.click('[data-testid="LoginForm_Login_Button"]');
   await page.waitForSelector('[data-testid="ocfSelectAvatarSkipForNowButton"]', {
     timeout: 5000,
   });
   await page.click('[data-testid="ocfSelectAvatarSkipForNowButton"]');
-  console.log('skip avatar');
   await page.waitForSelector('[data-testid="ocfEnterUsernameSkipButton"]', {
     timeout: 5000,
   });
   await page.click('[data-testid="ocfEnterUsernameSkipButton"]');
-  console.log('skip username');
   await page.waitForSelector(
     'div[class="css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-1wzrnnt r-19yznuf r-64el8z r-1dye5f7 r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l"]',
     {
